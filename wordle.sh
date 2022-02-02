@@ -1,7 +1,7 @@
 url="https://gist.githubusercontent.com/marlinspike/bda109cee3fb46e9c4e6af999c029d2e/raw/2105fdc4cc65e3ce7197150397008b8d7a617b9d/wordle_words.txt"
 words=($(curl -s $url | grep '^\w\w\w\w\w$' | tr '[a-z]' '[A-Z]'))
 actual=${words[$[$RANDOM % ${#words[@]}]]} end=false guess_count=0 max_guess=6
-if [[ $1 == "unlimit" ]]; then
+if [[ $1 == "cheat" ]]; then
     max_guess=999999
 fi
 while [[ $end != true ]]; do
